@@ -2,6 +2,17 @@
 ## Description
 The data was aquired during Schanzer Almfest at Ingolstadt in 2018 by [IlassAG](https://www.ilass.com). As a part of a practical at the [Data Mining and Analytics Chair by Prof. Günnemann at TUM](https://www.kdd.in.tum.de) we've been given the task to count objects at checkout. Therefore we annotated the data with bounding boxes and classes to train an object detection network.
 ![Annotated image](images/example_annotated.png)
+
+## Benchmark
+For training object detection models we've been using [tensorflow's Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection). We trained several different approaches and got best results for an Single Shot Detector (SSD) with Feature Pyramid Networks (FPN). Our evaluation metric was the AUC score on a test set of 86 images. 
+
+Approach | Backbone model | AUC score 	
+ --- | --- | --- 
+SSD | Mobilenet | 0.86
+SSD + FPN | Mobilenet | 0.98
+Faster RCNN (PyTorch Version) | VGG-16 | 0.95
+RFCN | ResNet-101 | 0.965
+
 <!---
 ## Task
 Throughout this practical we aimed to implement, test and evaluate approaches to solve the problem of counting food items at checkout. You'll find code we used in this repository. However, note that it is not straight forward to use as data and models are due to their storage size not apparent. 
