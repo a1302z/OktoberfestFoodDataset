@@ -35,6 +35,16 @@ SSD + FPN | Mobilenet | 0.98
 Faster RCNN (PyTorch Version) | VGG-16 | 0.95
 RFCN | ResNet-101 | 0.965
 
+## Code
+We offer several pieces of code, for data inspection, conversion and labeling as well as evaluation and further usages which are very specific to our approaches. Please see the [code directory](code) for usage. 
+
+## Authors
+[Alexander Ziller](https://github.com/a1302z): Student of Robotics, Cognition & Intelligence (M.Sc.) at TUM \
+Julius Hansjakob: Student of Informatics (M.Sc.) at TUM \
+Vitalii Rusinov: Student of Informatics (M.Sc.) at TUM \
+
+We also want to credit [Daniel Zügner](https://github.com/danielzuegner) for advising us any time and encouraging to publish this dataset. 
+
 <!---
 ## Task
 Throughout this practical we aimed to implement, test and evaluate approaches to solve the problem of counting food items at checkout. You'll find code we used in this repository. However, note that it is not straight forward to use as data and models are due to their storage size not apparent. 
