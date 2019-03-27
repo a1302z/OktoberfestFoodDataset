@@ -3,6 +3,28 @@
 The data was aquired during Schanzer Almfest at Ingolstadt in 2018 by [IlassAG](https://www.ilass.com). As a part of a practical at the [Data Mining and Analytics Chair by Prof. Günnemann at TUM](https://www.kdd.in.tum.de) we've been given the task to count objects at checkout. Therefore we annotated the data with bounding boxes and classes to train an object detection network.
 ![Annotated image](images/example_annotated.png)
 
+### Data distribution
+
+Number of labels | Class
+ --- | ---
+458 | Bier
+317 | Bier Mass
+308 | Weissbier
+221 | Cola
+300 | Wasser
+179 | Curry-Wurst
+119 | Weisswein
+101 | A-Schorle
+154 | Jaegermeister
+149 | Pommes
+144 | Burger
+129 | Williamsbirne
+126 | Alm-Breze
+74 | Brotzeitkorb
+116 | Kaesespaetzle
+
+![Distribution](images/stats.png)
+
 ## Benchmark
 For training object detection models we've been using [tensorflow's Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection). We trained several different approaches and got best results for an Single Shot Detector (SSD) with Feature Pyramid Networks (FPN). Our evaluation metric was the AUC score on a test set of 86 images. 
 
