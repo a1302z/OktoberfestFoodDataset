@@ -26,7 +26,7 @@ Number of labels | Class
 ![Distribution](images/stats.png)
 
 ## Benchmark
-For training object detection models we've been using [tensorflow's Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection). We trained several different approaches and got best results for an Single Shot Detector (SSD) with Feature Pyramid Networks (FPN). Our evaluation metric was the AUC score on a test set of 86 images. 
+For training object detection models we've been using [tensorflow's Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection). We trained several different approaches and got best results for an Single Shot Detector (SSD) with Feature Pyramid Networks (FPN). Our evaluation metric was the AUC score (as our goal was to count we used IoU=0) on a test set of 86 images. 
 
 Approach | Backbone model | AUC score 	
  --- | --- | --- 
@@ -41,7 +41,7 @@ We offer several pieces of code, for data inspection, conversion and labeling as
 ## Authors
 [Alexander Ziller](https://github.com/a1302z): Student of Robotics, Cognition & Intelligence (M.Sc.) at TUM \
 Julius Hansjakob: Student of Informatics (M.Sc.) at TUM \
-Vitalii Rusinov: Student of Informatics (M.Sc.) at TUM \
+Vitalii Rusinov: Student of Informatics (M.Sc.) at TUM 
 
 We also want to credit [Daniel Zügner](https://github.com/danielzuegner) for advising us any time and encouraging to publish this dataset. 
 
