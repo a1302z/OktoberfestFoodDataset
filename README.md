@@ -35,12 +35,12 @@ Number of labels | Class
 ## Benchmark
 For training object detection models we've been using [tensorflow's Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection). We trained several different approaches and got best results for an Single Shot Detector (SSD) with Feature Pyramid Networks (FPN). Our evaluation metric was the area under the precision-recall curve on a test set of 86 images (as our goal was to count we ignored the localization). 
 
-Approach | Backbone model | Area 	
- --- | --- | --- 
-SSD | Mobilenet | 0.86
-SSD + FPN | Mobilenet | 0.98
-Faster RCNN (PyTorch Version) | VGG-16 | 0.95
-RFCN | ResNet-101 | 0.965
+Approach | Backbone model | Area | Example precision@recall
+ --- | --- | --- | ---
+SSD | Mobilenet | 0.86 | 0.85@0.70
+SSD + FPN | Mobilenet | 0.98 | 0.97@0.97
+Faster RCNN (PyTorch Version) | VGG-16 | 0.95 | 0.90@0.92
+RFCN | ResNet-101 | 0.965 | 0.90@0.95
 
 TODO
 - die pretrained models irgendwo hochladen
@@ -50,7 +50,7 @@ The [Evaluation](evaluation) folder contains Jupyter notebooks to evaluate the T
 
 With the [Preview](Preview.ipynb) notebook one can try out the pretrained TensorFlow models on arbitrary images.
 
-The [CreateTFRecord](CreateTFRecord.ipynb) notebook contains code to convert the dataset in to the TFRecord file format so it can be used with the TensorFlow object detection library.
+The [CreateTFRecordFile](CreateTFRecordFile.ipynb) notebook contains code to convert the dataset in to the TFRecord file format so it can be used with the TensorFlow object detection library.
 
 The [ShowAnnotations](ShowAnnotations.py) visualizes the bounding boxes of the dataset. Use 'n' for the next image, 'p' for the previous and 'q' to quit. 
 
