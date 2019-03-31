@@ -13,6 +13,9 @@ category_names = ['Bier', 'Bier Mass', 'Weissbier', 'Cola', 'Wasser', 'Curry-Wur
                    'A-Schorle', 'Jaegermeister', 'Pommes', 'Burger', 'Williamsbirne', 'Alm-Breze', 'Brotzeitkorb',
                    'Kaesespaetzle']
 
+if len(sys.argv) < 2:
+    print("Please specify a folder!")
+    exit()
 path = sys.argv[1]
 resize = float(sys.argv[2]) if len(sys.argv) > 2 else 1.0
 print("Resizing display by a factor of %.2f" % resize)
