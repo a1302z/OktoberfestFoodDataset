@@ -1,0 +1,3 @@
+# Dataset creation 
+1. [Create smaller dataset](CreateSmallerDataset.py) was used to create small datasets to see how sensitive training is to having limited training dataset.
+2. The [Pseudo labeling script](LargePseudoLabeling.py) creates larger data by the semi-supervised pseudo labeling idea. It uses a model that is trained on small data to get labels for unlabeled data. As the created datasets were far larger than 1 TB we did not upload them here but give the code and our models so they can be retrieved. 
