@@ -29,9 +29,9 @@ Brotzeitkorb | 65 | 72 | 1.11
 Kaesespaetzle | 92 | 100 | 1.09 
 Total | 1110 | 2696 | 2.43
 
-![Images per class](images/images_per_class.png)
-![Annotations per class](images/annotations_per_class.png)
-![Items per image](images/items_per_image.png)
+![Images per class](images/images_per_class.png) \
+![Annotations per class](images/annotations_per_class.png) \
+![Items per image](images/items_per_image.png) \
 ![Occurance heat map](images/Occurance_heatmap.png)
 
 ## Benchmark
