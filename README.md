@@ -4,33 +4,35 @@ The data was aquired during Schanzer Almfest at Ingolstadt in 2018 by [IlassAG](
 
 ## Dataset Description
 TODO
-- mehr statistiken über das dataset
 - usage
 - wie man es herunterladen kann
 - den datensatz irgendwo hochladen
-- pascal voc format
 
 ### Data Distribution
 
-Number of labels | Class
- --- | ---
-458 | Bier
-317 | Bier Mass
-308 | Weissbier
-221 | Cola
-300 | Wasser
-179 | Curry-Wurst
-119 | Weisswein
-101 | A-Schorle
-154 | Jaegermeister
-149 | Pommes
-144 | Burger
-129 | Williamsbirne
-126 | Alm-Breze
-74 | Brotzeitkorb
-116 | Kaesespaetzle
+Class | Images | Annotations | average quantity
+ --- | --- | --- | ---
+Bier | 300 | 436 | 1.45 
+Bier Mass | 200 | 299 | 1.50 
+Weissbier | 229 | 298 | 1.30 
+Cola | 165 | 210 | 1.27 
+Wasser | 198 | 284 | 1.43 
+Curry-Wurst | 120 | 159 | 1.32 
+Weisswein | 81 | 105 | 1.30 
+A-Schorle | 90 | 98 | 1.09 
+Jaegermeister | 43 | 152 | 3.53 
+Pommes | 110 | 126 | 1.15 
+Burger | 105 | 122 | 1.16 
+Williamsbirne | 50 | 121 | 2.42 
+Alm-Breze | 100 | 114 | 1.14 
+Brotzeitkorb | 65 | 72 | 1.11 
+Kaesespaetzle | 92 | 100 | 1.09 
+Total | 1110 | 2696 | 2.43
 
-![Distribution](images/stats.png)
+![Images per class](images/images_per_class.png)
+![Annotations per class](images/annotations_per_class.png)
+![Items per image](images/items_per_image.png)
+![Occurance heat map](images/Occurance_heatmap.png)
 
 ## Benchmark
 For training object detection models we've been using [tensorflow's Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection). We trained several different approaches and got best results for an Single Shot Detector (SSD) with Feature Pyramid Networks (FPN). Our evaluation metric was the area under the precision-recall curve on a test set of 86 images (as our goal was to count we ignored the localization). 
