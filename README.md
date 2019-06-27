@@ -2,11 +2,11 @@
 The data was aquired during Schanzer Almfest at Ingolstadt in 2018 by [IlassAG](https://www.ilass.com). As a part of a practical at the [Data Mining and Analytics Chair by Prof. Günnemann at TUM](https://www.kdd.in.tum.de) we've been given the task to count objects at checkout. Therefore we annotated the data with bounding boxes and classes to train an object detection network.
 ![Annotated image](images/example_annotated.png)
 
+## Download
+You can find the dataset [here](https://mediatum.ub.tum.de/1487154)
+
 ## Dataset Description
-TODO
-- usage
-- wie man es herunterladen kann
-- den datensatz irgendwo hochladen
+
 
 ### Data Distribution
 
@@ -29,6 +29,8 @@ Brotzeitkorb | 65 | 72 | 1.11
 Kaesespaetzle | 92 | 100 | 1.09 
 Total | 1110 | 2696 | 2.43
 
+### Statistics
+
 ![Images per class](images/images_per_class.png) \
 ![Annotations per class](images/annotations_per_class.png) \
 ![Items per image](images/items_per_image.png) \
@@ -39,13 +41,11 @@ For training object detection models we've been using [tensorflow's Object Detec
 
 Approach | Backbone model | Area | Example precision@recall
  --- | --- | --- | ---
-SSD | Mobilenet | 0.86 | 0.85@0.70
-SSD + FPN | Mobilenet | 0.98 | 0.97@0.97
-Faster RCNN (PyTorch Version) | VGG-16 | 0.95 | 0.90@0.92
-RFCN | ResNet-101 | 0.965 | 0.90@0.95
+[SSD](https://dataserv.ub.tum.de/index.php/s/m1487154/download?path=/models&files=ssd.pb) | Mobilenet | 0.86 | 0.85@0.70
+[SSD + FPN](https://dataserv.ub.tum.de/index.php/s/m1487154/download?path=/models&files=ssd_fpn.pb) | Mobilenet | 0.98 | 0.97@0.97
+[RFCN](https://dataserv.ub.tum.de/index.php/s/m1487154/download?path=/models&files=rfcn.pb) | ResNet-101 | 0.965 | 0.90@0.95
 
-TODO
-- die pretrained models irgendwo hochladen
+<!--- Faster RCNN (PyTorch Version) | VGG-16 | 0.95 | 0.90@0.92 --->
 
 ## Code
 The [Evaluation](evaluation) folder contains Jupyter notebooks to evaluate the TensorFlow models.
