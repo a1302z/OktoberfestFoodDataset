@@ -4,30 +4,35 @@ The data was aquired during Schanzer Almfest at Ingolstadt in 2018 by [IlassAG](
 
 ## Download
 You can find the dataset [here](https://mediatum.ub.tum.de/1487154)
+- `dataset` contains the train and test datset including the labels
+  - the labels can be found in `files.txt` (OpenCV style)
+  - `<filename> <number of objects> <classid1> <x1> <y1> <w1> <h1> <classid2> <x2> <y2> <w2> <h2> ...`
+- `models` contains our pretrained tensorflow models (see [Preview.ipynb](Preview.ipynb) for an example usage)
+- `video_data_zipped` contains the raw videos from which the dataset were extracted
 
 ## Dataset Description
 
 
 ### Data Distribution
 
-Class | Images | Annotations | average quantity
- --- | --- | --- | ---
-Bier | 300 | 436 | 1.45 
-Bier Mass | 200 | 299 | 1.50 
-Weissbier | 229 | 298 | 1.30 
-Cola | 165 | 210 | 1.27 
-Wasser | 198 | 284 | 1.43 
-Curry-Wurst | 120 | 159 | 1.32 
-Weisswein | 81 | 105 | 1.30 
-A-Schorle | 90 | 98 | 1.09 
-Jaegermeister | 43 | 152 | 3.53 
-Pommes | 110 | 126 | 1.15 
-Burger | 105 | 122 | 1.16 
-Williamsbirne | 50 | 121 | 2.42 
-Alm-Breze | 100 | 114 | 1.14 
-Brotzeitkorb | 65 | 72 | 1.11 
-Kaesespaetzle | 92 | 100 | 1.09 
-Total | 1110 | 2696 | 2.43
+Class Id | Class | Images | Annotations | average quantity
+ --- | --- | --- | --- | ---
+0 | Bier | 300 | 436 | 1.45 
+1 | Bier Mass | 200 | 299 | 1.50 
+2 | Weissbier | 229 | 298 | 1.30 
+3 | Cola | 165 | 210 | 1.27 
+4 | Wasser | 198 | 284 | 1.43 
+5 | Curry-Wurst | 120 | 159 | 1.32 
+6 | Weisswein | 81 | 105 | 1.30 
+7 | A-Schorle | 90 | 98 | 1.09 
+8 | Jaegermeister | 43 | 152 | 3.53 
+9 | Pommes | 110 | 126 | 1.15 
+10 | Burger | 105 | 122 | 1.16 
+11 | Williamsbirne | 50 | 121 | 2.42 
+12 | Alm-Breze | 100 | 114 | 1.14 
+13 | Brotzeitkorb | 65 | 72 | 1.11 
+14 | Kaesespaetzle | 92 | 100 | 1.09 
+  || Total | 1110 | 2696 | 2.43
 
 ### Statistics
 
