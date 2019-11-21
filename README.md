@@ -1,10 +1,10 @@
 # Oktoberfest Food Dataset
-The data was aquired during Schanzer Almfest at Ingolstadt in 2018 by [IlassAG](https://www.ilass.com). As a part of a practical at the [Data Mining and Analytics Chair by Prof. Günnemann at TUM](https://www.kdd.in.tum.de) we've been given the task to count objects at checkout. Therefore we annotated the data with bounding boxes and classes to train an object detection network.
+The data was aquired during Schanzer Almfest at Ingolstadt in 2018 by [IlassAG](https://www.ilass.com). As a part of a practical at the [Data Mining and Analytics Chair by Prof. Günnemann at TUM](https://www.kdd.in.tum.de) we were given the task to count objects at checkout. Therefore we annotated the data with bounding boxes and classes to train an object detection network.
 ![Annotated image](images/example_annotated.png)
 
 ## Download
 You can find the dataset [here](https://mediatum.ub.tum.de/1487154)
-- `dataset` contains the train and test datset including the labels
+- `dataset` contains the train and test datasets including the labels
   - the labels can be found in `files.txt` (OpenCV style)
   - `<filename> <number of objects> <classid1> <x1> <y1> <w1> <h1> <classid2> <x2> <y2> <w2> <h2> ...`
 - `models` contains our pretrained tensorflow models (see [Preview.ipynb](Preview.ipynb) for an example usage)
@@ -42,7 +42,7 @@ Class Id | Class | Images | Annotations | average quantity
 ![Occurance heat map](images/Occurance_heatmap.png)
 
 ## Benchmark
-For training object detection models we've been using [tensorflow's Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection). We trained several different approaches and got best results for an Single Shot Detector (SSD) with Feature Pyramid Networks (FPN). Our evaluation metric was the area under the precision-recall curve on a test set of 86 images (as our goal was to count we ignored the localization). 
+For training object detection models we used [tensorflow's Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection). We trained several different approaches and got best results for a Single Shot Detector (SSD) with Feature Pyramid Networks (FPN). Our evaluation metric was the area under the precision-recall curve on a test set of 86 images (as our goal was to count we ignored the localization). 
 
 Approach | Backbone model | Area | Example precision@recall
  --- | --- | --- | ---
@@ -61,9 +61,25 @@ The [CreateTFRecordFile](CreateTFRecordFile.ipynb) notebook contains code to con
 
 The [ShowAnnotations](ShowAnnotations.py) visualizes the bounding boxes of the dataset. Use 'n' for the next image, 'p' for the previous and 'q' to quit. 
 
+## PASCAL_VOC format
+This was done by [Vitalii Rusinov](https://github.com/vitaliy-rusinov) and is further explained in his [fork](https://github.com/vitaliy-rusinov/OktoberfestFoodDataset).
+
+[Images](https://drive.google.com/open?id=1rgJUEFB4Cmbf9mQVdGPCHGiT4bvh_gDT)
+
+[Video](https://drive.google.com/open?id=1mLIc1Ybs1rVwzMDuWMwxWUgl7spx2tBB)
+
+In addition, the labels in the PASCAL_VOC format are available in the [PASCAL_VOC folder](PASCAL_VOC).
+
+Online Notebooks to train Faster RCNN and Retinanet models on the dataset using Google Colaboratory are available here
+
+[Faster RCNN Pytorch](https://drive.google.com/open?id=1CDQ5cIA8qsdm-OinbfPKM5DuoI6ewvZH)
+
+[RetinaNet Tensorflow](https://drive.google.com/open?id=1KxP-j0TSQ_PY7xkJ4JNRyMnLv7kjRB_e)
+
+
 ## Authors
 [Alexander Ziller](https://github.com/a1302z): Student of Robotics, Cognition & Intelligence (M.Sc.) at TUM \
 [Julius Hansjakob](https://github.com/polarbart): Student of Informatics (M.Sc.) at TUM \
-Vitalii Rusinov: Student of Informatics (M.Sc.) at TUM 
+[Vitalii Rusinov](https://github.com/vitaliy-rusinov): Student of Informatics (M.Sc.) at TUM 
 
-We also want to credit [Daniel Zügner](https://github.com/danielzuegner) for advising us any time and encouraging to publish this dataset. 
+We also want to credit [Daniel Zügner](https://github.com/danielzuegner) for his efforts. 
