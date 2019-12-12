@@ -10,6 +10,19 @@ You can find the dataset [here](https://mediatum.ub.tum.de/1487154)
 - `models` contains our pretrained tensorflow models (see [Preview.ipynb](Preview.ipynb) for an example usage)
 - `video_data_zipped` contains the raw videos from which the dataset were extracted
 
+## Citation
+If you find this work useful you may consider citing our [paper](https://arxiv.org/abs/1912.05007)
+```
+@misc{tum2019oktoberfest,
+    title={Oktoberfest Food Dataset},
+    author={Alexander Ziller and Julius Hansjakob and Vitalii Rusinov and Daniel Z\"ugner and Peter Vogel and Stephan G\"unnemann},
+    year={2019},
+    eprint={1912.05007},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+```
+
 ## Dataset Description
 
 
